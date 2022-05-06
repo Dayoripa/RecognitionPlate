@@ -20,20 +20,19 @@ while True:
         break
     
     # Dibujamos un rectangulo
-    cv2.rectangle(frame, (820, 200), (450, 60), (0, 0, 0), cv2.FILLED)
-    cv2.putText(frame, Ctexto[0:7], (550, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+    cv2.rectangle(frame, (70, 200), (400, 60), (0, 0, 0), cv2.FILLED)
+    cv2.putText(frame, Ctexto[0:7], (150, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
     
     placas = Ctexto[0:7]
     
     if(placas == 'HPT 699'):
         cv2.rectangle(frame, (980, 500), (350, 620), (0, 0, 13), cv2.FILLED)
         cv2.putText(frame, 'Propietario: Daulin Riascos', (450, 550), cv2.FONT_HERSHEY_SIMPLEX, 1,(255, 255, 255), 2)
-        cv2.putText(frame, 'Valor a pagar: $ 6.0000', (450, 590), cv2.FONT_HERSHEY_SIMPLEX, 1,(0, 0, 255), 2)
     elif(placas == 'JZR 933'):
-        cv2.putText(frame, 'Propietario no identificado', (900, 170), cv2.FONT_HERSHEY_SIMPLEX, 1,(255, 0, 0), 2)
+        cv2.putText(frame, 'Propietario no identificado', (450, 550), cv2.FONT_HERSHEY_SIMPLEX, 1,(0, 0, 255), 2)
     elif(placas == 'DIV 402'):
-            cv2.putText(frame, 'propietario: Andres', (900, 170), cv2.FONT_HERSHEY_SIMPLEX, 1,(255, 0, 0), 2)
-            cv2.putText(frame, 'Valor a cobrar: $ 8.5000', (700, 100), cv2.FONT_HERSHEY_SIMPLEX, 1,(255, 0, 0), 2)
+            cv2.putText(frame, 'propietario: Andres', (450, 550), cv2.FONT_HERSHEY_SIMPLEX, 1,(255, 255, 255), 2)
+            cv2.putText(frame, 'Valor a pagar: $ 6.0000', (450, 590), cv2.FONT_HERSHEY_SIMPLEX, 1,(0, 0, 255), 2)
     
 
     
@@ -51,7 +50,7 @@ while True:
     
     # Texto
     #cv2.rectangle(frame, (x1 + 400, y1 + -50), (450, 135), (0, 0, 0), cv2.FILLED)
-    cv2.putText(frame, 'Detectando placa...', (x1 + 70, y1 + -70), cv2.FONT_HERSHEY_SIMPLEX, 1,(255, 255, 255), 2)
+    cv2.putText(frame, 'Detectando placa...', (x1 + -350, y1 + -70), cv2.FONT_HERSHEY_SIMPLEX, 1,(255, 255, 255), 2)
     # ubicamos el rectangulo en las zonas extraidas
     cv2.rectangle(frame, (x1, y1), (x2, y2), (255, 0, 0), 2)
     
