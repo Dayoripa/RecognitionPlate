@@ -10,8 +10,7 @@ from PIL import Image
 # se importa el video
 cap = cv2.VideoCapture("video.mp4")
 
-Ctexto = ''
-
+Ctexto = ''                 
 while True:
     #Realiza la lectura de la videoCaptura
     ret, frame = cap.read()
@@ -20,22 +19,59 @@ while True:
         break
     
     # Dibujamos un rectangulo
-    cv2.rectangle(frame, (70, 200), (400, 60), (0, 0, 0), cv2.FILLED)
-    cv2.putText(frame, Ctexto[0:7], (150, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
-    
+    cv2.rectangle(frame, (750, 190), (550, 240), (255, 0, 0), cv2.FILLED)
+    cv2.putText(frame, Ctexto[0:7], (590, 225), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+    bandera = True
     placas = Ctexto[0:7]
     
-    if(placas == 'HPT 699'):
-        cv2.rectangle(frame, (980, 500), (350, 620), (0, 0, 13), cv2.FILLED)
-        cv2.putText(frame, 'Propietario: Daulin Riascos', (450, 550), cv2.FONT_HERSHEY_SIMPLEX, 1,(255, 255, 255), 2)
+    if(placas == 'IPY 428'):
+        cv2.rectangle(frame, (640, 480), (425, 520), (255, 0, 0), cv2.FILLED)
+        cv2.putText(frame, 'Pepito perez', (427, 507), cv2.FONT_HERSHEY_SIMPLEX, 0.7,(255, 255, 255), 2)
+        cv2.putText(frame, 'Ingresando...', (430, 540), cv2.FONT_HERSHEY_SIMPLEX, 0.6,(255, 255, 255), 2)   
+    elif(placas == 'HZS 810'):
+        cv2.rectangle(frame, (640, 480), (425, 520), (255, 0, 0), cv2.FILLED)
+        cv2.putText(frame, 'Teofila Mina', (427, 507), cv2.FONT_HERSHEY_SIMPLEX, 0.7,(255, 255, 255), 2)
+        cv2.putText(frame, 'Ingresando...', (430, 540), cv2.FONT_HERSHEY_SIMPLEX, 0.6,(255, 255, 255), 2)
+    elif(placas == 'KVN 289'):
+         cv2.rectangle(frame, (695, 480), (425, 520), (0, 0, 255), cv2.FILLED)
+         cv2.putText(frame, 'Vehiculo no registrado', (427, 507), cv2.FONT_HERSHEY_SIMPLEX, 0.7,(255, 255, 255), 2)
+    elif(placas == 'CUN 160'):
+        cv2.rectangle(frame, (640, 480), (425, 520), (255, 0, 0), cv2.FILLED)
+        cv2.putText(frame, 'Fulanito Diaz', (427, 507), cv2.FONT_HERSHEY_SIMPLEX, 0.7,(255, 255, 255), 2)
+        cv2.putText(frame, 'Ingresando...', (430, 540), cv2.FONT_HERSHEY_SIMPLEX, 0.6,(255, 255, 255), 2)
+    elif(placas == 'CUR 984'):
+        cv2.rectangle(frame, (640, 480), (425, 520), (255, 0, 0), cv2.FILLED)
+        cv2.putText(frame, 'Elenena', (427, 507), cv2.FONT_HERSHEY_SIMPLEX, 0.7,(255, 255, 255), 2)
+        cv2.putText(frame, 'Ingresando...', (430, 540), cv2.FONT_HERSHEY_SIMPLEX, 0.6,(255, 255, 255), 2)
+    elif(placas == 'CUN-160'):
+        cv2.rectangle(frame, (640, 480), (425, 520), (255, 0, 0), cv2.FILLED)
+        cv2.putText(frame, 'paquito Moreno', (427, 507), cv2.FONT_HERSHEY_SIMPLEX, 0.7,(255, 255, 255), 2)
+        cv2.putText(frame, 'Ingresando...', (430, 540), cv2.FONT_HERSHEY_SIMPLEX, 0.6,(255, 255, 255), 2)
+    elif(placas == 'HDY 778'):
+        cv2.rectangle(frame, (640, 480), (425, 520), (255, 0, 0), cv2.FILLED)
+        cv2.putText(frame, 'Teresa Caicedo ', (427, 507), cv2.FONT_HERSHEY_SIMPLEX, 0.7,(255, 255, 255), 2)
+        cv2.putText(frame, 'Saliendo / pagar: $10.000', (430, 540), cv2.FONT_HERSHEY_SIMPLEX, 0.6,(0, 0, 255), 2)
+    elif(placas == 'EHY 392'):
+        cv2.rectangle(frame, (695, 480), (425, 520), (0, 0, 255), cv2.FILLED)
+        cv2.putText(frame, 'Vehiculo no registrado', (427, 507), cv2.FONT_HERSHEY_SIMPLEX, 0.7,(255, 255, 255), 2)
+        cv2.putText(frame, 'Ingresando...', (430, 540), cv2.FONT_HERSHEY_SIMPLEX, 0.6,(255, 255, 255), 2)
+    elif(placas == 'ENV 570'):
+        cv2.rectangle(frame, (640, 480), (425, 520), (255, 0, 0), cv2.FILLED)
+        cv2.putText(frame, 'Liliana Cabezas', (427, 507), cv2.FONT_HERSHEY_SIMPLEX, 0.7,(255, 255, 255), 2)
+        cv2.putText(frame, 'Saliendo / pagar: $10.000', (430, 540), cv2.FONT_HERSHEY_SIMPLEX, 0.6,(0, 0, 255), 2)
+    elif(placas == 'HPT 699'):
+        cv2.rectangle(frame, (640, 480), (425, 520), (255, 0, 0), cv2.FILLED)
+        cv2.putText(frame, 'Martin Sanchez', (427, 507), cv2.FONT_HERSHEY_SIMPLEX, 0.7,(255, 255, 255), 2)
+        cv2.putText(frame, 'Ingresando...', (430, 540), cv2.FONT_HERSHEY_SIMPLEX, 0.6,(255, 255, 255), 2)
     elif(placas == 'JZR 933'):
-        cv2.putText(frame, 'Propietario no identificado', (450, 550), cv2.FONT_HERSHEY_SIMPLEX, 1,(0, 0, 255), 2)
+        cv2.rectangle(frame, (640, 480), (425, 520), (255, 0, 0), cv2.FILLED)
+        cv2.putText(frame, 'Diego Flores', (427, 507), cv2.FONT_HERSHEY_SIMPLEX, 0.7,(255, 255, 255), 2)
+        cv2.putText(frame, 'Ingresando...', (430, 540), cv2.FONT_HERSHEY_SIMPLEX, 0.6,(255, 255, 255), 2)
     elif(placas == 'DIV 402'):
-            cv2.putText(frame, 'propietario: Andres', (450, 550), cv2.FONT_HERSHEY_SIMPLEX, 1,(255, 255, 255), 2)
-            cv2.putText(frame, 'Valor a pagar: $ 6.0000', (450, 590), cv2.FONT_HERSHEY_SIMPLEX, 1,(0, 0, 255), 2)
-    
+        cv2.rectangle(frame, (640, 480), (425, 520), (255, 0, 0), cv2.FILLED)
+        cv2.putText(frame, 'Gina Arce', (427, 507), cv2.FONT_HERSHEY_SIMPLEX, 0.7,(255, 255, 255), 2)
+        cv2.putText(frame, 'Ingresando...', (430, 540), cv2.FONT_HERSHEY_SIMPLEX, 0.6,(255, 255, 255), 2)
 
-    
     # Extraemos el ancho y alto de los fotogramas
     al, an, c = frame.shape
     
@@ -48,9 +84,6 @@ while True:
     y1 = int (al / 3) # Tomamos 1/3 de la imagen
     y2 = int (y1 * 2) #Hasta el inicio del 3/3 de la imagen"
     
-    # Texto
-    #cv2.rectangle(frame, (x1 + 400, y1 + -50), (450, 135), (0, 0, 0), cv2.FILLED)
-    cv2.putText(frame, 'Detectando placa...', (x1 + -350, y1 + -70), cv2.FONT_HERSHEY_SIMPLEX, 1,(255, 255, 255), 2)
     # ubicamos el rectangulo en las zonas extraidas
     cv2.rectangle(frame, (x1, y1), (x2, y2), (255, 0, 0), 2)
     
@@ -131,7 +164,6 @@ while True:
                 # Extraemos el texto
                 config = "--psm 1"
                 texto = pytesseract.image_to_string(bin, config=config)
-                
                 # If para no mostrar basura
                 if len(texto) >= 7:
                     #print(texto[0:7])
