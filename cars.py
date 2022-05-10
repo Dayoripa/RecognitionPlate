@@ -21,7 +21,6 @@ while True:
     # Dibujamos un rectangulo
     cv2.rectangle(frame, (750, 190), (550, 240), (255, 0, 0), cv2.FILLED)
     cv2.putText(frame, Ctexto[0:7], (590, 225), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
-    bandera = True
     placas = Ctexto[0:7]
     
     if(placas == 'IPY 428'):
@@ -140,7 +139,7 @@ while True:
             mGp = np.matrix(placa[:, :, 1])
             mRp = np.matrix(placa[:, :, 2])
             
-            # creamos una mascara
+            # creamos una mascara para resaltar el color negro
             for col in range(0, alp):
                 for fil in range(0, anp):
                     Max = max(mRp[col, fil], mGp[col, fil] ,mBp[col, fil])
@@ -166,12 +165,8 @@ while True:
                 texto = pytesseract.image_to_string(bin, config=config)
                 # If para no mostrar basura
                 if len(texto) >= 7:
-                    #print(texto[0:7])
                     
                     Ctexto = texto
-                    
-                    ## Mostramos los valores que nos interesa
-                    # cv2.putText(frame, Ctexto[0:7], (910, 810), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
             break
                 
             # Mostramos el reporte
