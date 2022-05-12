@@ -1,0 +1,53 @@
+{
+    "user1":{
+                "name" : "Pepito perez",
+                "plate" : "IPY 428" 
+    },
+    "user2":{
+                "name" : "Teofila Mina",
+                "plate" : "HZS 810"
+    },
+    "user3":{
+        "name" : "Vehiculo no registrado",
+        "plate" : "KVN 289"
+    },
+    "user4":{
+        "name" : "Fulanito Dias",
+        "plate" : "CUN 160"
+    },
+    "user5":{
+        "name" : "Elena Marin",
+        "plate" : "CUR 984"
+    },
+    "user6":{
+        "name" : "Teresa Caicedo",
+        "plate" : "HDY 778"
+    },
+    "user7":{
+        "name" : "Vehiculo no Registrado",
+        "plate" : "EHY 392"
+    },
+    "user8":{
+        "name" : "Liliana Cabezas",
+        "plate" : "ENV 570",
+        "value": 5000
+    },
+    "user9":{
+        "name" : "Martin Sanchez",
+        "plate" : "HPT 699",
+        "value": 5000
+    },
+    "user10":{
+        "name" : "Diego Flores",
+        "plate" : "JZR 933",
+        "value": 5000
+    },
+    "user11":{
+        "name" : "Gina Arce",
+        "plate" : "DIV 402",
+        "value": 5000
+    }
+
+    
+
+}   
